@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "225075605874",
+    "firebase_url": "https://database-e51c8-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "database-e51c8",
+    "storage_bucket": "database-e51c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225075605874:android:5d97d0e5cddae3bb40edeb",
+        "android_client_info": {
+          "package_name": "com.example.proekt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIjZiWnN_ZwKEF1-X3YL2kWR7HJEQaPTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

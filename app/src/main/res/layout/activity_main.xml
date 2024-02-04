@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="@drawable/pngwing1"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edittext"
+            android:height="48dp"
+            android:hint="Задача"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editanswer"
+            android:height="48dp"
+            android:hint="Ответ"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edittem"
+            android:height="48dp"
+            android:hint="Тема"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/editbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Добавить"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/black"/>
+        <Button
+            android:id="@+id/outbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Вывести"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/black"/>
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Очистить"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edittextid"
+            android:height="48dp"
+            android:hint="Введите номер задачи"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
+        <Button
+            android:id="@+id/editbtnid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Перейти"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/black"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

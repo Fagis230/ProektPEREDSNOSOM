@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity4"
+    android:gravity="center"
+    android:background="@drawable/pngwing1"
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите тему"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="68dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/termo1"
+            android:hint="Термодинамика"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/black"
+            />
+
+        <Button
+            android:id="@+id/mehanic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Механика"
+
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/black"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edittextid2"
+            android:height="48dp"
+            android:hint="Введите номер задачи"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
+        <Button
+            android:id="@+id/editbtnid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Перейти"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/black"/>
+    </LinearLayout>
+</LinearLayout>
