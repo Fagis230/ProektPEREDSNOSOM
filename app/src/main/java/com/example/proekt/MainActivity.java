@@ -2,6 +2,8 @@ package com.example.proekt;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -14,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.view.View;
 
@@ -43,6 +46,13 @@ public class MainActivity extends AppCompatActivity  {
     Button button_clear;
     String selection;
     DBHelper dbHelper;
+    Button buttongroup;
+    Button buttonadd;
+    Button buttonprofile;
+    FrameLayout frameLayout;
+
+
+
 
 
 
@@ -53,70 +63,25 @@ public class MainActivity extends AppCompatActivity  {
         dbHelper = new DBHelper(this);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         sqLiteDatabase = dbHelper.getWritableDatabase();
-        button_out = (Button) findViewById(R.id.outbtn);
-        button_edit = (Button) findViewById(R.id.editbtn);
-        button_clear = (Button) findViewById(R.id.clear);
-        buttonid = (Button) findViewById(R.id.editbtnid);
-        edit = (EditText) findViewById(R.id.edittext);
-        edit2 = (EditText) findViewById(R.id.editanswer);
-        edit3 = (EditText) findViewById(R.id.edittem);
         editid = (EditText) findViewById(R.id.edittextid);
-        button_edit.setOnClickListener(new View.OnClickListener() {
+        buttonid = (Button) findViewById(R.id.editbtnid);
+        buttonadd = (Button) findViewById(R.id.buttonadd);
+        buttongroup = (Button) findViewById(R.id.buttongr);
+        buttonprofile= (Button) findViewById(R.id.buttonpr);
+        frameLayout = (FrameLayout) findViewById(R.id.framelayout);
+
+
+        buttonadd.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String zad1 = edit.getText().toString();
-                String answer1 = edit2.getText().toString();
-                String tem1 = edit3.getText().toString();
-                Log.d("mLog","id = " + zad1 +
-                        ", text = " + answer1 + ",answer = "+
-                        ",tem = "+ tem1);
-                ContentValues contentValues = new ContentValues();
-                switch (v.getId()) {
-                    case R.id.editbtn:
-                        contentValues.put(COLUMN_TEXTZ,zad1);
-                        contentValues.put(COLUMN_ANSWER,answer1);
-                        contentValues.put( COLUMN_TEM,tem1);
-                        sqLiteDatabase.insert(TABLE_NAME, null, contentValues);
-                        break;
-                }
-            }
-        });
-        button_out.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view1) {
-                switch (view1.getId()){
-                    case  R.id.outbtn:
-                        Cursor cursor = sqLiteDatabase.query(TABLE_NAME, null, null, null, null, null, null);
-                        if (cursor.moveToFirst()){
-                            int idIndex  = cursor.getColumnIndex(COLUMN_ID);
-                            int textIndex  = cursor.getColumnIndex(COLUMN_TEXTZ);
-                            int answerIndex  = cursor.getColumnIndex(COLUMN_ANSWER);
-                            int temIndex  = cursor.getColumnIndex(COLUMN_TEM);
-                            do {
-                                Log.d("mLog","id = " + cursor.getInt(idIndex)+
-                                        ", text = " + cursor.getString(textIndex) + ",answer = "+
-                                        cursor.getString(answerIndex)+",tem = "+ cursor.getString(temIndex));
-                            } while (cursor.moveToNext());
-                        }
-                        else
-                            Log.d("mLog","0 rows");
-                        cursor.close();
-                        break;
-                }
+            public void onClick(View view) {
+                BlankFragment blankFragment = new BlankFragment();
+                FragmentTransaction ft =getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.framelayout,blankFragment);
+                ft.commit();
 
             }
         });
-        button_clear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view2) {
-                switch(view2.getId()){
-                    case R.id.clear:
-                        sqLiteDatabase.delete(TABLE_NAME,null,null);
-                        break;
-                }
 
-            }
-        });
         buttonid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view3) {
