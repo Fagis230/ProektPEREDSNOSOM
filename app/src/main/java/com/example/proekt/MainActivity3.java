@@ -25,13 +25,14 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity3 extends AppCompatActivity {
     SQLiteDatabase sqLiteDatabasel;
     String[] cn1 = null;
-    private static final String DATABASE_NAME1 = "info2";
+    private static final String DATABASE_NAME1 = "info3";
     private static final String TABLE_NAME1 = "Persons";
     private static final String COLUMN_LOG = "Login";
     private static final String COLUMN_ID = "ID";
     private static final String COLUMN_PAS = "Password";
     private static final String COLUMN_ROL = "ROL";
-    private static final String COlUMN_GROUP = "Group";
+    private static final String COlUMN_GROUP = "GroupTEXT";
+    private static final String COlUMN_TASK = "Task";
     String selection1;
     public String log2;
     public String pas2;
@@ -45,7 +46,7 @@ public class MainActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("db");
-        OpenHelper1 openHelperL = new OpenHelper1(MainActivity3.this);
+        DBHelperlog openHelperL = new DBHelperlog(MainActivity3.this);
         sqLiteDatabasel = openHelperL.getWritableDatabase();
         EditText edtl = (EditText) findViewById(R.id.login);
         EditText edtp = (EditText) findViewById(R.id.password);
@@ -99,13 +100,15 @@ public class MainActivity3 extends AppCompatActivity {
                         if(pas1.equals(pas2) & rol.equals("Teacher")){
                             Toast.makeText(MainActivity3.this,"УСПЕШНЫЙ ВХОД",Toast.LENGTH_SHORT).show();
                             startActivity(Main3);
+
                         }if(!(pas1.equals(pas2))) {
                             Toast.makeText(MainActivity3.this,"НЕПРАВИЛЬНЫЙ ПАРОЛЬ",Toast.LENGTH_SHORT).show();
 
                         }
                         if(pas1.equals(pas2) & rol.equals("Pupil")){
                             Toast.makeText(MainActivity3.this,"УСПЕШНЫЙ ВХОД",Toast.LENGTH_SHORT).show();
-                            startActivity(Main4);}
+                            startActivity(Main4);
+                        }
 
 
                         do {
@@ -125,24 +128,5 @@ public class MainActivity3 extends AppCompatActivity {
 
 
     }
-    public static class OpenHelper1 extends SQLiteOpenHelper {
 
-        OpenHelper1(Context context) {
-            super(context, DATABASE_NAME1, null, 1);
-        }
-
-        @Override
-        public void onCreate(SQLiteDatabase db) {
-            String query = "CREATE TABLE " + TABLE_NAME1 + " (" +
-                    COLUMN_ID + " integer primary key autoincrement, "
-                    + COLUMN_LOG + " TEXT, "+COLUMN_ROL+" TEXT, " +COlUMN_GROUP+ "TEXT, "+ COLUMN_PAS + " TEXT );";
-            db.execSQL(query);
-        }
-
-        @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            db.execSQL("DROP TABLE IF EXISTS " + DATABASE_NAME1);
-            onCreate(db);
-        }
-    }
 }

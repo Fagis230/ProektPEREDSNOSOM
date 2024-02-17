@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragmentmakegroup"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/idperson"
+        android:hint="Введите логины пользователей"
+        >
+
+    </EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/idgroup"
+        android:hint="Введите номер группы"
+        >
+
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonmake"
+        android:layout_width='wrap_content'
+        android:layout_height="50dp"
+        android:text="Создать" />
+</LinearLayout>

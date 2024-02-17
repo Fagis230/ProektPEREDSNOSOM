@@ -21,6 +21,7 @@ import android.widget.Toast;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity  {
+
     private static final String DATABASE_NAME = "ZAD1.db";
     private static final String TABLE_NAME = "questions1";
     private static final String COLUMN_TEM = "TEM";
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity  {
     Button buttonadd;
     Button buttonprofile;
     FrameLayout frameLayout;
+    Button floating;
+    DBHelperlog log;
+    SQLiteDatabase sql3;
 
 
 
@@ -71,6 +75,8 @@ public class MainActivity extends AppCompatActivity  {
         frameLayout = (FrameLayout) findViewById(R.id.framelayout);
 
 
+
+
         buttonadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,6 +85,13 @@ public class MainActivity extends AppCompatActivity  {
                 ft.replace(R.id.framelayout,blankFragment);
                 ft.commit();
 
+            }
+        });
+        buttongroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent group  = new Intent(MainActivity.this,MainActivity5.class);
+                startActivity(group);
             }
         });
 
