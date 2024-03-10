@@ -21,27 +21,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Просмотреть" />
+            android:text="Просмотреть"
+            android:backgroundTint="@color/black"
+            android:textColorHint="@color/white"/>
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Создать группу" />
+            android:text="Создать группу"
+            android:backgroundTint="@color/black"
+            android:textColorHint="@color/white"/>
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Добавить в группу" />
+            android:text="Добавить в группу"
+            android:backgroundTint="@color/black"
+            android:textColorHint="@color/white"/>
         <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Выдать задание ученику"
+            android:backgroundTint="@color/black"
+            android:textColorHint="@color/white"
             />
         <Button
             android:id="@+id/button6"
@@ -49,6 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Выдать задание группе"
+            android:backgroundTint="@color/black"
+            android:textColorHint="@color/white"
             />
     </LinearLayout>
 

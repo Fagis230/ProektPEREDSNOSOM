@@ -52,7 +52,6 @@ public class BlankFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_blank,null);
         dbHelper = new DBHelper(getActivity());
         sqLiteDatabase = dbHelper.getWritableDatabase();
-        button_out = (Button) v.findViewById(R.id.outbtn);
         button_edit = (Button) v.findViewById(R.id.editbtn);
         button_clear = (Button) v.findViewById(R.id.clear);
 
@@ -79,31 +78,6 @@ public class BlankFragment extends Fragment {
                         sqLiteDatabase.insert(TABLE_NAME, null, contentValues);
                         break;
                 }
-            }
-        });
-        button_out.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view1) {
-                switch (view1.getId()){
-                    case  R.id.outbtn:
-                        Cursor cursor = sqLiteDatabase.query(TABLE_NAME, null, null, null, null, null, null);
-                        if (cursor.moveToFirst()){
-                            int idIndex  = cursor.getColumnIndex(COLUMN_ID);
-                            int textIndex  = cursor.getColumnIndex(COLUMN_TEXTZ);
-                            int answerIndex  = cursor.getColumnIndex(COLUMN_ANSWER);
-                            int temIndex  = cursor.getColumnIndex(COLUMN_TEM);
-                            do {
-                                Log.d("mLog","id = " + cursor.getInt(idIndex)+
-                                        ", text = " + cursor.getString(textIndex) + ",answer = "+
-                                        cursor.getString(answerIndex)+",tem = "+ cursor.getString(temIndex));
-                            } while (cursor.moveToNext());
-                        }
-                        else
-                            Log.d("mLog","0 rows");
-                        cursor.close();
-                        break;
-                }
-
             }
         });
         button_clear.setOnClickListener(new View.OnClickListener() {

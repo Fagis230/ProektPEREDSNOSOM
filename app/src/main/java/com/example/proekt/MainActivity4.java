@@ -27,34 +27,73 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 
 public class MainActivity4 extends AppCompatActivity {
     DBHelper dbHelper;
     SQLiteDatabase sqLiteDatabase1;
     String[] cn1 = null;
     String selection1;
+    private static final String DATABASE_NAME1 = "info4";
+    private static final String TABLE_NAME1 = "Persons";
+    private static final String COLUMN_LOG = "Login";
+    private static final String COLUMN_ID = "ID";
+    private static final String COLUMN_PAS = "Password";
+    private static final String COLUMN_ROL = "ROL";
+    private static final String COlUMN_GROUP = "GroupTEXT";
+    private static final String COlUMN_TASK = "Task";
+    private static final String COlUMN_STATUS = "Status";
     private String idText;
     private String textZAD;
     private String answerTEXT;
     private static final String DATABASE_NAME = "ZAD1.db";
     private static final String TABLE_NAME = "questions1";
     private static final String COLUMN_TEM = "TEM";
-    private static final String COLUMN_ID = "ID";
     private static final String COLUMN_TEXTZ = "TEXTZ";
     private static final String COLUMN_ANSWER = "ANSWER";
     private static final int DATABASE_VERSION  = 1;
+    Button button9;
+    FloatingActionButton floatingActionButton3;
+    DBHelperlog dbHelperlog;
+    SQLiteDatabase sqLiteDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Intent  MAin4 = getIntent();
+        dbHelperlog = new DBHelperlog(this);
+        sqLiteDatabase  = dbHelperlog.getWritableDatabase();
+        String curlogin = MAin4.getStringExtra("curlogin");
         dbHelper = new DBHelper(this);
         sqLiteDatabase1 = dbHelper.getWritableDatabase();
         Button button1 = (Button) findViewById(R.id.termo1);
         Button button2 = (Button) findViewById(R.id.mehanic1);
         Button buttonid2= (Button) findViewById(R.id.editbtnid2);
         EditText editid2=(EditText) findViewById(R.id.edittextid2);
+        floatingActionButton3 = findViewById(R.id.floatingActionButton3);
+        floatingActionButton3.setOnClickListener(new View.OnClickListener() {
+            Intent main5 = new Intent(MainActivity4.this, MainActivity3.class);
+            @Override
+            public void onClick(View view) {
+                ContentValues contentValues = new ContentValues();
+                contentValues.put(COlUMN_STATUS,"Unsign");
+                sqLiteDatabase.update(TABLE_NAME1,contentValues,COLUMN_LOG + "=?",new String[]{curlogin});
+                startActivity(main5);
+
+            }
+        });
+        button9  =findViewById(R.id.button9);
+        button9.setOnClickListener(new View.OnClickListener() {
+            Intent main1233 = new Intent(MainActivity4.this, MainActivity6.class);
+            @Override
+            public void onClick(View view) {
+                main1233.putExtra("curlogin",curlogin);
+                startActivity(main1233);
+
+            }
+        });
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

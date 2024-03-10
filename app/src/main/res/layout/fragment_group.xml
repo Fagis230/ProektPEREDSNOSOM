@@ -18,6 +18,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:textColorHint="@color/black"
             android:hint="Введите логин"
             android:id="@+id/editshegol"
             >
@@ -27,6 +28,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:textColorHint="@color/black"
             android:id="@+id/groupedit"
             android:hint="Группа"
             >
@@ -39,7 +41,8 @@
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Добавить"
+            android:backgroundTint="@color/black"/>
     </LinearLayout>
 
     <TextView
@@ -48,6 +51,8 @@
         android:layout_height="50dp"
         android:layout_weight="1"
         android:textSize="20dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         android:text="Добавте пользователя по логину"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

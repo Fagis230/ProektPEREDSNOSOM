@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity3"
-    android:background="@drawable/pngwing1"
+    android:background="@drawable/phon"
     >
     <TextView
         android:layout_width="match_parent"

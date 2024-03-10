@@ -3,35 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragmentmaketask1"
-    android:orientation="vertical"
-    >
+    tools:context=".BlankFragment3"
+    android:orientation="vertical">
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:id="@+id/student"
-        android:hint="Введите логин ученика"
-        android:textColorHint="@color/black"
-
-        >
-
-    </EditText>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:id="@+id/task"
-        android:hint="Введите id задачи"
-        android:textColorHint="@color/black"
-        >
-    </EditText>
-
-
-    <Button
-        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Добавить"
+        android:id="@+id/changel"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:hint="Введите логин">
+
+    </EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/changep"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:hint="Введите пароль">
+
+    </EditText>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button8"
         android:textColor="@color/white"
         android:backgroundTint="@color/black"
-        />
+        android:textColorHint="@color/white"
+        android:text="Изменить">
+
+    </Button>
+
+
 </LinearLayout>

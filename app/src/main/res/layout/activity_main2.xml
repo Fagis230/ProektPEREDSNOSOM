@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2"
     android:orientation="vertical"
-    android:background="@drawable/pngwing1"
+
     >
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textid"
             android:textSize="25sp"
-            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             />
     </LinearLayout>
     <TextView
@@ -26,7 +27,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/textzad"
         android:textSize="25sp"
-        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         >
     </TextView>
 
@@ -36,8 +38,8 @@
         android:id="@+id/edittextans"
         android:height="48dp"
         android:hint="Введите ответ"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         />
 
     <LinearLayout
@@ -50,9 +52,8 @@
             android:layout_height="wrap_content"
             android:hint="Ответить"
             android:textColorHint="@color/white"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:backgroundTint="@color/black"/>
-
     </LinearLayout>
 
 

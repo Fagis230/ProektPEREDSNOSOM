@@ -33,6 +33,7 @@ public class MainActivity3 extends AppCompatActivity {
     private static final String COLUMN_ROL = "ROL";
     private static final String COlUMN_GROUP = "GroupTEXT";
     private static final String COlUMN_TASK = "Task";
+    private static final String COlUMN_STATUS = "Status";
     String selection1;
     public String log2;
     public String pas2;
@@ -99,7 +100,11 @@ public class MainActivity3 extends AppCompatActivity {
                         rol = cursor1.getString(rol1);
                         if(pas1.equals(pas2) & rol.equals("Teacher")){
                             Toast.makeText(MainActivity3.this,"УСПЕШНЫЙ ВХОД",Toast.LENGTH_SHORT).show();
+                            contentValues1.put(COlUMN_STATUS,"Sign");
+                            sqLiteDatabasel.update(TABLE_NAME1,contentValues1,COLUMN_LOG+"=?",new String[]{log1});
+                            Main3.putExtra("curlogin",log1);
                             startActivity(Main3);
+
 
                         }if(!(pas1.equals(pas2))) {
                             Toast.makeText(MainActivity3.this,"НЕПРАВИЛЬНЫЙ ПАРОЛЬ",Toast.LENGTH_SHORT).show();
@@ -107,6 +112,9 @@ public class MainActivity3 extends AppCompatActivity {
                         }
                         if(pas1.equals(pas2) & rol.equals("Pupil")){
                             Toast.makeText(MainActivity3.this,"УСПЕШНЫЙ ВХОД",Toast.LENGTH_SHORT).show();
+                            contentValues1.put(COlUMN_STATUS,"Sign");
+                            sqLiteDatabasel.update(TABLE_NAME1,contentValues1,COLUMN_LOG+"=?",new String[]{log1});
+                            Main4.putExtra("curlogin",log1);
                             startActivity(Main4);
                         }
 

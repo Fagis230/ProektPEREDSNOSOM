@@ -28,7 +28,7 @@ public class Fragmentmakegroup extends Fragment {
     private static final String COLUMN_ID = "ID";
     private static final String COLUMN_PAS = "Password";
     private static final String COLUMN_ROL = "ROL";
-    private static final String COlUMN_GROUP = "GroupText";
+    private static final String COlUMN_GROUP = "GroupTEXTTEXT";
     private static final int DATABASE_VERSION  = 1;
 
     @Override

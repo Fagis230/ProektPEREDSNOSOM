@@ -19,7 +19,7 @@ public class Fragmentmaketask1 extends Fragment {    private static final String
     private static final String COLUMN_ID = "ID";
     private static final String COLUMN_PAS = "Password";
     private static final String COLUMN_ROL = "ROL";
-    private static final String COlUMN_GROUP = "Group";
+    private static final String COlUMN_GROUP = "GroupTEXTTEXT";
     private static final String COlUMN_TASK = "Task";
 
     Button button;

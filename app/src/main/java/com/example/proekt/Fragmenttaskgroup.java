@@ -24,7 +24,7 @@ public class Fragmenttaskgroup extends Fragment {
     private static final String COLUMN_ID = "ID";
     private static final String COLUMN_PAS = "Password";
     private static final String COLUMN_ROL = "ROL";
-    private static final String COlUMN_GROUP = "GroupTEXT";
+    private static final String COlUMN_GROUP = "GroupTEXTTEXT";
     private static final String COlUMN_TASK = "Task";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

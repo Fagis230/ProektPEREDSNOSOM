@@ -12,6 +12,7 @@
         android:layout_height="45dp"
         android:id="@+id/group23"
         android:hint="Введите id группы"
+        android:textColorHint="@color/black"
 
         >
 
@@ -21,6 +22,7 @@
         android:layout_height="48dp"
         android:id="@+id/task23"
         android:hint="Введите id задачи"
+        android:textColorHint="@color/black"
         >
     </EditText>
 
@@ -29,6 +31,7 @@
         android:id="@+id/buttontask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
         android:text="Button" />
 
 </LinearLayout>

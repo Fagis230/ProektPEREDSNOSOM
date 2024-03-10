@@ -17,7 +17,7 @@
             android:height="48dp"
             android:hint="Задача"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/black"
 
             />
         <EditText
@@ -27,7 +27,7 @@
             android:height="48dp"
             android:hint="Ответ"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/black"
             />
         <EditText
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:height="48dp"
             android:hint="Тема"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/black"
             />
 
     </LinearLayout>
@@ -50,13 +50,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Добавить"
-            android:textColorHint="@color/white"
-            android:backgroundTint="@color/black"/>
-        <Button
-            android:id="@+id/outbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Вывести"
             android:textColorHint="@color/white"
             android:backgroundTint="@color/black"/>
         <Button
