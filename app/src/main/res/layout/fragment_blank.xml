@@ -16,7 +16,7 @@
             android:id="@+id/edittext"
             android:height="48dp"
             android:hint="Задача"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
 
             />
@@ -26,7 +26,7 @@
             android:id="@+id/editanswer"
             android:height="48dp"
             android:hint="Ответ"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
             />
         <EditText
@@ -35,7 +35,7 @@
             android:id="@+id/edittem"
             android:height="48dp"
             android:hint="Тема"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
             />
 
