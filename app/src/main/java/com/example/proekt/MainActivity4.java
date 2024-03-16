@@ -47,6 +47,7 @@ public class MainActivity4 extends AppCompatActivity {
     private String idText;
     private String textZAD;
     private String answerTEXT;
+    private String task;
     private static final String DATABASE_NAME = "ZAD1.db";
     private static final String TABLE_NAME = "questions1";
     private static final String COLUMN_TEM = "TEM";
@@ -72,6 +73,18 @@ public class MainActivity4 extends AppCompatActivity {
         Button button2 = (Button) findViewById(R.id.mehanic1);
         Button buttonid2= (Button) findViewById(R.id.editbtnid2);
         EditText editid2=(EditText) findViewById(R.id.edittextid2);
+        Cursor cursor123;
+        cursor123 = sqLiteDatabase.query(TABLE_NAME1,null,COLUMN_LOG+"=?",new String[]{curlogin},null,null,null);
+        int stri = cursor123.getColumnIndex(COlUMN_TASK);
+        Log.d("fffffff", String.valueOf(stri));
+
+        if(cursor123.moveToFirst()){
+            task = cursor123.getString(stri);
+            if( task!= null){
+                Toast.makeText(MainActivity4.this,"У вас есть задание",Toast.LENGTH_SHORT).show();
+            }
+
+        }
         floatingActionButton3 = findViewById(R.id.floatingActionButton3);
         floatingActionButton3.setOnClickListener(new View.OnClickListener() {
             Intent main5 = new Intent(MainActivity4.this, MainActivity3.class);
@@ -97,7 +110,7 @@ public class MainActivity4 extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Dinamic = new Intent(MainActivity4.this,DinamicActivity.class);
+                Intent Dinamic = new Intent(MainActivity4.this,DinamicActivity2.class);
                 startActivity(Dinamic);
 
             }
@@ -105,7 +118,7 @@ public class MainActivity4 extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Mechanic = new Intent(MainActivity4.this,MechanicActivity.class);
+                Intent Mechanic = new Intent(MainActivity4.this,MehanicActivity2.class);
                 startActivity(Mechanic);
 
 

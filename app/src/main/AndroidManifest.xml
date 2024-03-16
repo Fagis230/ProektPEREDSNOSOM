@@ -29,7 +29,7 @@
         <activity
             android:name=".MainActivity4"
             android:exported="false"
-            android:parentActivityName=".MainActivity3" />
+            />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -42,10 +42,12 @@
             android:exported="false" />
         <activity
             android:name=".MehanicActivity2"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity4"/>
         <activity
             android:name=".DinamicActivity2"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity4"/>
         <activity
             android:name=".MechanicActivity"
             android:exported="false" />

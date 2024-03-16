@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MehanicActivity2"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +17,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/mechanic1_text"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:text="Вертолет поднимается вертикально вверх. Какова траектория движения точки на конце лопасти винта вертолета в системе отсчета, связанной с винтом?
+ 
+
+1)  точка
+
+2)  прямая
+
+3)  окружность
+
+4)  винтовая линия"
             />
     </LinearLayout>
     <LinearLayout
@@ -26,22 +40,42 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+            android:textColorHint="@color/black"
+            android:id="@+id/mehanicinput"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/mechanic1_button"
             android:hint="Ответить"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/mechanic1_answer"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             />
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вернуться"
+
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
 
 
 </LinearLayout>

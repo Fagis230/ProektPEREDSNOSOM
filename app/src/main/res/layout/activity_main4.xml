@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity4"
     android:gravity="center"
+    android:background="@color/white"
 
     >
 
@@ -26,11 +27,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Профиль"
-        app:icon = "@drawable/baseline_person_outline_24"
+        app:icon = "@drawable/baseline_person_24"
         android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <TextView
         android:id="@+id/textView2"

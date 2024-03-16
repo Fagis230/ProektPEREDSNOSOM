@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DinamicActivity2"
     android:orientation="vertical"
+    android:background="@color/white"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/termo1_text"
+            android:textColor="@color/black"
+            android:text="Брусок массой  движется поступательно по горизонтальной плоскости под действием постоянной силы, направленной под углом  к горизонту. Модуль этой силы  Коэффициент трения между бруском и плоскостью  Чему равен модуль силы трения, действующей на брусок? Ответ приведите в ньютонах."
          />
     </LinearLayout>
     <LinearLayout
@@ -27,24 +30,42 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:id="@+id/dinamicinput"
+
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/termo1_button"
             android:hint="Ответить"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/termo1_answer"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             />
 
 
     </LinearLayout>
 
-
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вернуться"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
 
 
 </LinearLayout>

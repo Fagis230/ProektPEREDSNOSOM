@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5">
+    tools:context=".MainActivity5"
+    android:background="@color/white">
 
 
     <LinearLayout
@@ -23,6 +24,7 @@
             android:layout_weight="1"
             android:text="Просмотреть"
             android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"/>
 
         <Button
@@ -32,6 +34,7 @@
             android:layout_weight="1"
             android:text="Создать группу"
             android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"/>
 
         <Button
@@ -41,6 +44,7 @@
             android:layout_weight="1"
             android:text="Добавить в группу"
             android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"/>
         <Button
             android:id="@+id/button5"
@@ -49,6 +53,7 @@
             android:layout_weight="1"
             android:text="Выдать задание ученику"
             android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             />
         <Button
@@ -58,6 +63,7 @@
             android:layout_weight="1"
             android:text="Выдать задание группе"
             android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             />
     </LinearLayout>

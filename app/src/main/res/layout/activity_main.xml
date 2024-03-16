@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     android:gravity="center"
+    android:background="@color/white"
     >
 
 
@@ -82,11 +83,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@color/black"
                 android:text="группы"
-                android:textColorHint="@color/black"
                 android:textSize="10dp"
-                app:icon="@drawable/baseline_person_outline_24" />
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:icon="@drawable/baseline_person_24" />
 
             <Button
                 android:id="@+id/buttonadd"
@@ -95,18 +97,22 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/black"
                 android:text="добавить"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
                 android:textSize="10dp"
-                app:icon="@android:drawable/ic_menu_upload" />
+                app:icon="@drawable/baseline_arrow_upward_24" />
 
             <Button
                 android:id="@+id/buttonpr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColorHint="@color/white"
                 android:backgroundTint="@color/black"
+                android:textColor="@color/white"
                 android:text="профиль"
                 android:textSize="10dp"
-                app:icon="@drawable/baseline_person_outline_24" />
+                app:icon="@drawable/round_assignment_ind_24" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
